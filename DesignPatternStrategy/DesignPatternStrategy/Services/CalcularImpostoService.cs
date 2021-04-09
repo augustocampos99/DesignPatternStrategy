@@ -12,7 +12,9 @@ namespace DesignPatternStrategy.Services
         {
             try
             {
-                return imposto.CalcularImposto(orcamento.Valor);
+                double valorImposto = imposto.CalcularImposto(orcamento.Valor);
+                orcamento.ValorImposto += valorImposto;
+                return valorImposto;
             }
             catch (Exception ex)
             {

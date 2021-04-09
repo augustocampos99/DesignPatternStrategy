@@ -17,8 +17,10 @@ namespace DesignPatternStrategy
             var orcamentoComIcms = calcularImpostoService.CalcularOrcamento(orcamento, impostoIcmsService);
             var orcamentoComIss = calcularImpostoService.CalcularOrcamento(orcamento, impostoIssService);
 
-            Console.WriteLine("ICMS => " + orcamentoComIcms);
-            Console.WriteLine("ISS  => " + orcamentoComIss);
+            Console.WriteLine($"#### CALCULO IMPOSTO ({ orcamento.DataCalculo }) ####");
+            Console.WriteLine($"ICMS => {orcamentoComIcms}");
+            Console.WriteLine($"ISS  => {orcamentoComIss}");
+            Console.WriteLine($"TOTAL IMPOSTO  => {orcamento.ValorImposto}");
         }
     }
 }
